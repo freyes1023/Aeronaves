@@ -1,0 +1,40 @@
+{
+  "Alquiler": [
+    {
+      "id": 1,
+      "idDestino": 1,
+      "fechaLlegada": "2021/10/16",
+      "fechaSalida": "2021/10/16",
+      "idAeronave": 1
+    }
+  ],
+  "Destinos": [
+    {
+      "id": 1,
+      "body": "Marte"
+    }
+  ],
+  "Aeronaves": [
+    {
+      "id": 1,
+      "Name": "Aeronave 1"
+    }
+  ],
+  "users": [
+    {
+      "email": "freddy.reyes@mail.com",
+      "password": "$2a$10$.jMzYjI00FJOm7v.IXDNNuAdgEt0jxtQq.hDCDoYxW9YjHaxaloYq",
+      "firstname": "freddy",
+      "lastname": "reyes",
+      "age": 25,
+      "id": 2
+    }
+  ],
+  "AlquilerUser":[
+    {
+      "id":1,
+      "idAlquiler":1,
+      "idUser":1
+    }
+  ]
+}

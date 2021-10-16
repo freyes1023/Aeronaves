@@ -1,0 +1,7 @@
+{
+    "/users*": "/600/users$1",
+    "/Aeronaves*": "/640/Aeronaves$1",
+    "/Destinos*": "/640/Destinos$1",
+    "/Alquiler*": "/640/Alquiler$1",
+    "/AlquilerUser*": "/640/AlquilerUser$1"
+}
