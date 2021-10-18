@@ -20,5 +20,10 @@ export class HeaderComponent implements OnInit {
     localStorage.clear();
     this.router.navigateByUrl('/login');
   }
-
+  goToRental(){
+    this.router.navigateByUrl('/home/listRentals');
+  }
+  goToHome(){
+    this.router.navigateByUrl('/home');
+  }
 }

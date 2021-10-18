@@ -1,0 +1,14 @@
+<app-header></app-header>
+<section class="AppBody">
+<div class="container-fluid">
+    <h3 class="mb-3">Tus Alquileres</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" *ngFor="let alquiler of Alquileres">
+          <app-cards [Title]="alquiler.dataAeronave!.Name" [Id]="alquiler.dataAeronave!.id" [Img]="alquiler.dataAeronave!.imagen" [Text]="alquiler.description" [ViewButton]="false">
+          </app-cards>  
+        </div>        
+    </div>
+</div>
+</div>
+</section>

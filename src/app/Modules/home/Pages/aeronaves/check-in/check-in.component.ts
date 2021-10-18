@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, } from '@angular/router';
+import { ActivatedRoute, Router, } from '@angular/router';
 import { User } from '@interfaces/User.model';
 import { Alquiler } from '@modules/home/models/alquiler.model';
 import { Destino } from '@modules/home/models/destinos.model';
@@ -21,7 +21,7 @@ interface pasajero {
 export class CheckInComponent implements OnInit, OnDestroy {
   nave$: Subscription;
   nave: Naves | undefined;
-  Destinos: Destino[] | undefined;
+  Destinos: Destino[] = [];
   Users: User[] | undefined;
   idNave: string = '';
   AlquilerForm!: FormGroup;
@@ -30,7 +30,7 @@ export class CheckInComponent implements OnInit, OnDestroy {
   StringIdsPasajeros: string = ''
   loading = false;
   dispatched = false;
-  constructor(private route: ActivatedRoute, private homeService: HomeService, private formBuilder: FormBuilder,) {
+  constructor(private route: ActivatedRoute, private homeService: HomeService, private formBuilder: FormBuilder,private router: Router,) {
     this.nave$ = this.route.params.subscribe((data) => {
       this.idNave = data.id;
       console.log(this.idNave);
@@ -103,12 +103,16 @@ export class CheckInComponent implements OnInit, OnDestroy {
     if (this.AlquilerForm.valid) {
       if (this.pasajeros.length ) {
         this.loading = true;
+        const destino:Destino |undefined = this.Destinos.find((destino) => {
+          return destino.id == this.AlquilerForm.get('destino')?.value
+        })
         const dataAlquiler: Alquiler = {
           "idDestino": this.AlquilerForm.get('destino')?.value,
           "fechaLlegada": this.AlquilerForm.get('fechaLlegada')?.value,
           "fechaSalida": this.AlquilerForm.get('fechaSalida')?.value,
           "idAeronave": this.nave?.id,
-          "idsPasajeros": this.StringIdsPasajeros
+          "idsPasajeros": this.StringIdsPasajeros,
+          "nameDestino" : destino?.destino
         }
 
         this.homeService.alquilar(dataAlquiler)
@@ -123,6 +127,12 @@ export class CheckInComponent implements OnInit, OnDestroy {
               .subscribe((data) => {
                 console.log(data);
                 this.alert("Alquiler registrado correctamente!", 'success')
+                .then((data)=>{
+                  if(data.dismiss || data.isConfirmed){
+                    this.router.navigateByUrl('/home/listRentals')
+                  }
+                })
+
                 this.loading = false;
               }, error => {
                 this.loading = false;
@@ -141,7 +151,7 @@ export class CheckInComponent implements OnInit, OnDestroy {
   }
 
   alert(text: string, type: SweetAlertIcon) {
-    Swal.fire({
+    return Swal.fire({
       title: text,
       icon: type,
       confirmButtonText: 'Aceptar'

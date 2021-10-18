@@ -8,5 +8,5 @@ export const endpoint = {
     Destinos:`${constants.ApiUrl}Destinos`,
     Aeronaves:`${constants.ApiUrl}Aeronaves`,
     Alquiler:`${constants.ApiUrl}Alquiler`,
-    AlquilerUser :`${constants.ApiUrl}AlquilerUser `,
+    AlquilerUser :`${constants.ApiUrl}AlquilerUser`,
 }
