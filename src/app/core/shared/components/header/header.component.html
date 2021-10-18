@@ -2,10 +2,10 @@
 
   <div class="row w-100 justify-content-end">
     <div class="col ">
-      <img width="40" height="30" alt="Logo" [src]="Logo" class="float-left"/>
+      <img width="40" height="30" alt="Logo" [src]="Logo" class="float-left" (click)="goToRental()"/>
     </div>
     <div class="col text-center">
-      <span class="text-center">Aeronaves</span>
+      <span class="text-center" (click)="goToHome()" >Aeronaves</span>
     </div>
     <div class="col align-self-end textRight">
       <img width="40" height="30" alt="Logo" [src]="icn_signOut" class="icn_signOut" (click)="Logout()"/>
