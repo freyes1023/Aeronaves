@@ -1,0 +1,10 @@
+<h3 class="mb-3">Escoge una Aeronave!</h3>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" *ngFor="let nave of Naves">
+          <app-cards [Title]="nave.Name" [Id]="nave.id" [Img]="nave.imagen" [Text]="nave.description" [Data]="nave" (clickButton)="NaveSelected($event)">
+          </app-cards>  
+        </div>        
+    </div>
+</div>
+

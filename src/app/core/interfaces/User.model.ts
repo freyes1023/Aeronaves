@@ -1,8 +1,6 @@
 export interface User {
     user:string;
-    age:number;
     email:string;
-    firstname:string;
+    name:string;
     id:number;
-    lastname:string;
 }
