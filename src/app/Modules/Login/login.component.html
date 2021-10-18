@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div class="container-fluid">
+    <div class="row justify-content-center ">
+        <div class="col-sm-10 col-md-6 col-lg-4 colContent">
+            <section class="center loginContent rounded ">
+                <div class="text-center">
+                    <img [src]="Logo" alt="Logo" width="200">
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()" class="form ">
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input type="text" formControlName="email" name="mail" class="form-control"
+                            [ngClass]="{ 'is-invalid': dispatched  && FC.email.errors }" />
+                        <div *ngIf="dispatched  && FC.email.errors" class="invalid-feedback">
+                            <div *ngIf="FC.email.errors.required">Email requerido </div>
+                            <div *ngIf="FC.email.errors.email">formato de Email invalido </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control"
+                            [ngClass]="{ 'is-invalid': dispatched  && FC.password.errors }" />
+                        <div *ngIf="dispatched  && FC.password.errors" class="invalid-feedback">
+                            <div *ngIf="FC.password.errors.required">Password requerida</div>
+                        </div>
+                    </div>
+
+                    <!-- actions -->
+                    <div class="form-group mb-3">
+                        <button [disabled]="loading" class="btn btn-primary btn-block rounded w-100">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Login
+                        </button>
+
+                    </div>
+                </form>
+                <div class="text-center">
+                    <a routerLink="/register" class="link">¿No tienes una cuenta? Registrate!</a>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>

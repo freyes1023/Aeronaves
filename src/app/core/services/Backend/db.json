@@ -24,17 +24,23 @@
     {
       "email": "freddy.reyes@mail.com",
       "password": "$2a$10$.jMzYjI00FJOm7v.IXDNNuAdgEt0jxtQq.hDCDoYxW9YjHaxaloYq",
-      "firstname": "freddy",
-      "lastname": "reyes",
+      "name": "freddy",
       "age": 25,
       "id": 2
+    },
+    {
+      "email": "freddy.reyes2@mail.com",
+      "password": "$2a$10$GthwJxLOha2et8badGI0nOehRc/mTvgAvsZ7GaVVADY/ccqTs8ENm",
+      "name": "freddy",
+      "age": 25,
+      "id": 3
     }
   ],
-  "AlquilerUser":[
+  "AlquilerUser": [
     {
-      "id":1,
-      "idAlquiler":1,
-      "idUser":1
+      "id": 1,
+      "idAlquiler": 1,
+      "idUser": 1
     }
   ]
 }
