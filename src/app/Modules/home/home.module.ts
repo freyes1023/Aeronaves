@@ -7,6 +7,7 @@ import { HomeService } from './services/home.service';
 import { ListAeronavesComponent } from './Pages/aeronaves/list-aeronaves/list-aeronaves.component';
 import { CheckInComponent } from './Pages/aeronaves/check-in/check-in.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { ListRentalComponent } from './Pages/aeronaves/list-rental/list-rental.component';
 
 
 
@@ -15,7 +16,8 @@ import { CardsComponent } from './components/cards/cards.component';
     HomeComponent,
     ListAeronavesComponent,
     CheckInComponent,
-    CardsComponent
+    CardsComponent,
+    ListRentalComponent
   ],
   imports: [
     CommonModule,

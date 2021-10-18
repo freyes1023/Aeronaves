@@ -5,6 +5,8 @@ import { User } from '@interfaces/User.model';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import Swal from 'sweetalert2';
+import { Alquiler } from '../models/alquiler.model';
+import { AlquilerUser } from '../models/AlquilerUser.model';
 import { Destino } from '../models/destinos.model';
 import { Naves } from '../models/naves.model';
 
@@ -29,6 +31,14 @@ export class HomeService  {
   }
   GetUsers(): Observable<User[]>{
     const UrlUsers = endpoint.Users
+    return this.httpGet(UrlUsers);
+  }
+  GetAlquiler(id:number): Observable<Alquiler>{
+    const UrlUsers = endpoint.Alquiler + '/' + id;
+    return this.httpGet(UrlUsers);
+  }
+  GetUserAlquiler(idUser:number): Observable<AlquilerUser[]>{
+    const UrlUsers = endpoint.AlquilerUser+`?idUser=${idUser}`
     return this.httpGet(UrlUsers);
   }
 

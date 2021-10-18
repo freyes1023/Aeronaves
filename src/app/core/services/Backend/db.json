@@ -1,6 +1,22 @@
 {
   "Alquiler": [
-
+    {
+      "idDestino": "2",
+      "fechaLlegada": "2021-10-05",
+      "fechaSalida": "2021-10-28",
+      "idAeronave": 2,
+      "idsPasajeros": "4",
+      "id": 1
+    },
+    {
+      "idDestino": "3",
+      "fechaLlegada": "2021-10-21",
+      "fechaSalida": "2021-10-20",
+      "idAeronave": 1,
+      "idsPasajeros": "4",
+      "nameDestino": "saturno",
+      "id": 2
+    }
   ],
   "Destinos": [
     {
@@ -75,6 +91,50 @@
     }
   ],
   "AlquilerUser": [
-   
+    {
+      "idAlquiler": 1,
+      "idUser": 4,
+      "id": 1
+    },
+    {
+      "idAlquiler": 2,
+      "idUser": 4,
+      "id": 2
+    },
+    {
+      "idAlquiler": 3,
+      "idUser": 4,
+      "id": 3
+    },
+    {
+      "idAlquiler": 4,
+      "idUser": 4,
+      "id": 4
+    },
+    {
+      "idAlquiler": 5,
+      "idUser": 4,
+      "id": 5
+    },
+    {
+      "idAlquiler": 6,
+      "idUser": 4,
+      "id": 6
+    },
+    {
+      "idAlquiler": 7,
+      "idUser": 4,
+      "id": 7
+    },
+    {
+      "idAlquiler": 1,
+      "idUser": 4,
+      "id": 8
+    },
+    {
+      "idAlquiler": 2,
+      "idUser": 4,
+      "id": 9
+    }
   ]
 }
