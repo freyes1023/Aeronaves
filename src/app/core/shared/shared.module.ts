@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component'
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptorInterceptor } from '@services/auth/auth-interceptor.interceptor';
 
 
 @NgModule({
@@ -24,6 +25,11 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     ReactiveFormsModule ,
-  ]
+  ],
+  providers:[ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorInterceptor,
+    multi: true
+  }]
 })
 export class SharedModule { }

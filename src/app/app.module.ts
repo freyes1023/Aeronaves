@@ -25,11 +25,7 @@ import { AuthInterceptorInterceptor } from '@services/auth/auth-interceptor.inte
     }),
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthInterceptorInterceptor,
-      multi: true
-    }
+   
   ],
   bootstrap: [AppComponent]
 })

@@ -22,18 +22,10 @@
   ],
   "users": [
     {
-      "email": "freddy.reyes@mail.com",
-      "password": "$2a$10$.jMzYjI00FJOm7v.IXDNNuAdgEt0jxtQq.hDCDoYxW9YjHaxaloYq",
-      "name": "freddy",
-      "age": 25,
-      "id": 2
-    },
-    {
-      "email": "freddy.reyes2@mail.com",
-      "password": "$2a$10$GthwJxLOha2et8badGI0nOehRc/mTvgAvsZ7GaVVADY/ccqTs8ENm",
-      "name": "freddy",
-      "age": 25,
-      "id": 3
+      "email": "freddy.reyes729@gmail.com",
+      "password": "$2a$10$A19y9qSNzL22ClzywdWotOlE7Wikx7pZuopMVDcV0Ml9366pSmk5K",
+      "name": "FREDDY",
+      "id": 4
     }
   ],
   "AlquilerUser": [

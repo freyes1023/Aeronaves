@@ -9,6 +9,7 @@ import {
 import { Observable, throwError } from 'rxjs';
 import { Router } from '@angular/router';
 import { catchError } from 'rxjs/operators';
+import Swal from 'sweetalert2';
 @Injectable()
 export class AuthInterceptorInterceptor implements HttpInterceptor {
 
@@ -33,8 +34,12 @@ export class AuthInterceptorInterceptor implements HttpInterceptor {
 
     return next.handle(request).pipe(
       catchError((err: HttpErrorResponse) => {
-
         if (err.status === 401) {
+          Swal.fire({
+            title: 'Credenciales invalidas o Token Expirado',
+            icon: 'info',
+            confirmButtonText: 'Aceptar'
+          })
           this.router.navigateByUrl('/login');
         }
 

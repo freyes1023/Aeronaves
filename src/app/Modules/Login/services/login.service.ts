@@ -20,7 +20,7 @@ export class LoginService {
       map((data:any) => {
         const DataUser: responseLogin = data;   
         localStorage.setItem('User', JSON.stringify(DataUser.user));
-        localStorage.setItem('token', JSON.stringify(DataUser.accessToken));
+        localStorage.setItem('token', DataUser.accessToken );
         return DataUser;
     }),
       catchError((err) => {
