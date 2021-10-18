@@ -1,0 +1,12 @@
+<div class="text-center mb-3">
+    <div class="card pt-2 contentCard" >
+        <img class="card-img-top" [src]="img" alt="image" width="50" height="50">
+        <div class="card-body">
+            <h4 class="card-title">{{title}}</h4>
+            <p class="card-text">{{text}}</p>
+        </div>
+        <div class="card-footer " *ngIf="viewButton" (click)="clickButtonFn()">
+            {{textButton}}
+        </div>
+    </div>
+</div>

@@ -1,46 +1,80 @@
 {
   "Alquiler": [
-    {
-      "id": 1,
-      "idDestino": 1,
-      "fechaLlegada": "2021/10/16",
-      "fechaSalida": "2021/10/16",
-      "idAeronave": 1
-    }
+
   ],
   "Destinos": [
     {
       "id": 1,
-      "body": "Marte"
+      "destino": "Marte"
+    },
+    {
+      "id": 2,
+      "destino": "Jupiter"
+    },
+    {
+      "id": 3,
+      "destino": "saturno"
     }
   ],
   "Aeronaves": [
     {
       "id": 1,
-      "Name": "Aeronave 1"
+      "Name": "Aeronave 1",
+      "description": "Asombrosa descripcion de la nave 1 ",
+      "imagen": "./../../../../assets/img/Naves/Nave1.svg"
+    },
+    {
+      "id": 2,
+      "Name": "Aeronave 2",
+      "description": "Asombrosa descripcion de la nave 2 ",
+      "imagen": "./../../../../assets/img/Naves/Nave2.svg"
+    },
+    {
+      "id": 3,
+      "Name": "Aeronave 3",
+      "description": "Asombrosa descripcion de la nave 3 ",
+      "imagen": "./../../../../assets/img/Naves/Nave3.svg"
+    },
+    {
+      "id": 4,
+      "Name": "Aeronave 4",
+      "description": "Asombrosa descripcion de la nave 4 ",
+      "imagen": "./../../../../assets/img/Naves/Nave4.svg"
+    },
+    {
+      "id": 5,
+      "Name": "Aeronave 5",
+      "description": "Asombrosa descripcion de la nave 5 ",
+      "imagen": "./../../../../assets/img/Naves/Nave5.svg"
+    },
+    {
+      "id": 6,
+      "Name": "Aeronave 6",
+      "description": "Asombrosa descripcion de la nave 6 ",
+      "imagen": "./../../../../assets/img/Naves/Nave6.svg"
+    },
+    {
+      "id": 7,
+      "Name": "Aeronave 7",
+      "description": "Asombrosa descripcion de la nave 7 ",
+      "imagen": "./../../../../assets/img/Naves/Nave7.svg"
+    },
+    {
+      "id": 8,
+      "Name": "Aeronave 8",
+      "description": "Asombrosa descripcion de la nave 8 ",
+      "imagen": "./../../../../assets/img/Naves/Nave8.svg"
     }
   ],
   "users": [
     {
-      "email": "freddy.reyes@mail.com",
-      "password": "$2a$10$.jMzYjI00FJOm7v.IXDNNuAdgEt0jxtQq.hDCDoYxW9YjHaxaloYq",
-      "name": "freddy",
-      "age": 25,
-      "id": 2
-    },
-    {
-      "email": "freddy.reyes2@mail.com",
-      "password": "$2a$10$GthwJxLOha2et8badGI0nOehRc/mTvgAvsZ7GaVVADY/ccqTs8ENm",
-      "name": "freddy",
-      "age": 25,
-      "id": 3
+      "email": "freddy.reyes729@gmail.com",
+      "password": "$2a$10$A19y9qSNzL22ClzywdWotOlE7Wikx7pZuopMVDcV0Ml9366pSmk5K",
+      "name": "FREDDY",
+      "id": 4
     }
   ],
   "AlquilerUser": [
-    {
-      "id": 1,
-      "idAlquiler": 1,
-      "idUser": 1
-    }
+   
   ]
 }

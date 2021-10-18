@@ -1,0 +1,67 @@
+<app-header></app-header>
+<section class="AppBody">
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 ">
+                <app-cards [Title]="nave?.Name" [Id]="nave?.id" [Img]="nave?.imagen" [Text]="nave?.description" [ViewButton]="false"></app-cards>
+                <div *ngIf="pasajeros">
+                        <div class="row">
+                            <div class="col-3" *ngFor="let item of pasajeros">
+                                <h6 > <span class="badge bg-secondary">{{item.name}}</span></h6>
+                            </div>                            
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 ">
+                <section class="rounded ">
+                    <form [formGroup]="AlquilerForm" (ngSubmit)="alquilar()" class="form ">
+                        <div class="form-group mb-3">
+                            <label for="name">Destino</label>
+                            <select class="form-select" aria-label="seleccionar destino" formControlName="destino" name="destino">
+                                <option value="">Selecciona un destino</option>
+                                <option *ngFor="let destino of Destinos" [value]="destino.id"> {{destino.destino}}</option>
+                                
+                              </select>
+                            <div *ngIf="dispatched  && FC.destino.errors" class="invalid-feedback">
+                                <div *ngIf="FC.destino.errors.required">name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Fecha Llegada</label>
+                            <input type="date" formControlName="fechaLlegada" name="fechaLlegada" class="form-control"
+                                [ngClass]="{ 'is-invalid': dispatched  && FC.fechaLlegada.errors }" />
+                            <div *ngIf="dispatched  && FC.fechaLlegada.errors" class="invalid-feedback">
+                                <div *ngIf="FC.fechaLlegada.errors.required">Fecha de llegada requerida </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Fecha Salida</label>
+                            <input type="date" formControlName="fechaSalida" name="fechaSalida" class="form-control"
+                                [ngClass]="{ 'is-invalid': dispatched  && FC.fechaSalida.errors }" />
+                            <div *ngIf="dispatched  && FC.fechaSalida.errors" class="invalid-feedback">
+                                <div *ngIf="FC.fechaSalida.errors.required">Fecha de salida requerido </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3" *ngIf="Users?.length">
+                            <select class="form-select" formControlName="User" name="User" aria-label="Selecciona User" >
+                                <option value="">Selecciona un usuario</option>
+                                <option *ngFor="let user of Users" [value]="user.id"> {{user.name}}</option>
+                              </select>
+                            <button class="btn btn-outline-secondary" (click)="addPasagejero()" type="button" id="button-addon2">+</button>
+                          </div>
+                        <!-- actions -->
+                        <div class="form-group mb-3">
+                            <button [disabled]="loading" class="btn btn-primary btn-block rounded w-100">
+                                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                                Alquilar
+                            </button>
+    
+                        </div>
+                    </form>
+                </section>
+            </div>
+            
+        </div>
+</div>
+</section>
