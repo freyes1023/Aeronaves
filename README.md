@@ -4,7 +4,7 @@ This is an amazing aircraft rental project, was generated with [Angular CLI](htt
 
 ##  :alien: 🪐 Development Full PWA :astronaut: :alien:
 
-After installing packages with `NPM INSTALL` Run `npm run runPwa` for a full dev server with PWA and Backend. Navigate to `http://localhost:8080/`and you’ll see the amazing project .
+After installing packages with `NPM INSTALL` Run `npm run dev` for a full dev server with PWA and Backend. Navigate to `http://localhost:8080/`and you’ll see the amazing project .
 
 ## Development server
 
